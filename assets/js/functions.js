@@ -26,7 +26,7 @@ const operadores = {
   mas: document.getElementById("s+"),
   menos: document.getElementById("s-"),
   multiplicacion: document.getElementById("s*"),
-  division: ddocument.getElementById("s/"),
+  division: document.getElementById("s/"),
 };
 //! CONSTANTES programa
 let numero = "";
