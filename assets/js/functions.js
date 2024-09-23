@@ -1,3 +1,5 @@
+//! CONTANSTE pantalla
+const pantalla = document.getElementById("screen");
 //! CONSTANTES numeros
 const cero = document.getElementById("n0");
 const uno = document.getElementById("n1");
@@ -9,6 +11,10 @@ const seis = document.getElementById("n6");
 const siete = document.getElementById("n7");
 const ocho = document.getElementById("n8");
 const nueve = document.getElementById("n9");
+
+const clear = document.getElementById("clear");
+
+const point = document.getElementById("s.");
 export const nummatriz = [
   cero,
   uno,
@@ -21,6 +27,7 @@ export const nummatriz = [
   ocho,
   nueve,
 ];
+
 //! CONSTANTES operadores
 const operadores = {
   mas: document.getElementById("s+"),
@@ -30,6 +37,7 @@ const operadores = {
 };
 //! CONSTANTES programa
 let numero = "";
+let buffer = undefined;
 
 /**
  * Guarda en memoria el valor del numero seleccionado
@@ -39,9 +47,17 @@ let numero = "";
 
 export function numberMemory(element) {
   element.addEventListener("click", () => {
-    return (numero = numero + element.value);
+    if ((numero[0] == 0) & (numero.length == 1) & (element.value == 0)) {
+      return;
+    }
+    numero = numero + element.value;
+    pantalla.innerText = numero;
   });
 }
+
+
+
+//TODO: PENDIENTE DEFINIR FUNCIONES PARA OPERADORES DE CALDULADORA
 
 /**
  * @param {string} a
@@ -49,9 +65,28 @@ export function numberMemory(element) {
  * @returns {number}
  */
 
-export function operacion(a, b) {
+export function suma(a, b) {
+  buffer = parseFloat(numero);
+  numero = "";
+  pantalla.innerText = numero;
+
   let stna = parseFloat(a);
   let stnb = parseFloat(b);
-  if (condition) {
-  }
+
 }
+
+/////////////////////////////////////////////
+
+
+point.addEventListener("click", () => {
+  let existePunto = numero.indexOf(".");
+  if (existePunto == -1) {
+    numero = numero + point.value;
+    pantalla.innerText = numero;
+  }
+});
+
+clear.addEventListener("click", () => {
+  numero = "";
+  pantalla.innerText = numero;
+});

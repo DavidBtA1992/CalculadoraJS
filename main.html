@@ -5,35 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
     <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="shortcut icon" href="./assets/img/fav.jpg" />
   </head>
   <body>
+    <header>CALCULADORA BÁSICA</header>
     <table>
       <tr>
-        <td></td>
-        <td><button id="s/">/</button></td>
-        <td><button id="s*">*</button></td>
-        <td><button id="s-">-</button></td>
+        <td id="screen" class="screen" colspan="5"></td>
       </tr>
       <tr>
         <td><button id="n7" value="7">7</button></td>
         <td><button id="n8" value="8">8</button></td>
-        <td><button id="n9" value="8">9</button></td>
-        <td rowspan="2"><button id="s+">+</button></td>
+        <td><button id="n9" value="9">9</button></td>
+        <td><button id="s/">/</button></td>
+        <td rowspan="4"><button id="clear">C</button></td>
       </tr>
       <tr>
         <td><button id="n4" value="4">4</button></td>
         <td><button id="n5" value="5">5</button></td>
         <td><button id="n6" value="6">6</button></td>
+        <td><button id="s*">*</button></td>
       </tr>
       <tr>
-        <td><button type="submit" id="n1" value="1">1</button></td>
+        <td><button id="n1" value="1">1</button></td>
         <td><button id="n2" value="2">2</button></td>
         <td><button id="n3" value="3">3</button></td>
-        <td rowspan="2"><button class="enter" id="sE">ENTER</button></td>
+        <td><button id="s-">-</button></td>
       </tr>
       <tr>
-        <td align="center" colspan="2"><button id="n0" value="0">0</button></td>
-        <td ><button id="s.">.</button></td>
+        <td><button id="n0" value="0">0</button></td>
+        <td><button id="s." value=".">.</button></td>
+        <td><button id="sE">=</button></td>
+        <td><button id="s+">+</button></td>
       </tr>
     </table>
   </body>
